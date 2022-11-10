@@ -23,6 +23,8 @@ class Statute implements Artwork{
     }
 }
 
+let muvekdarabszama = 0;
+let muvekprice = 0;
 
 document.addEventListener('DOMContentLoaded', () => {
     let title = document.getElementById('title') as HTMLInputElement;
@@ -31,7 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let height = document.getElementById('height') as HTMLInputElement;
     let errormessage = document.getElementById('errorMessage')as HTMLElement;
     let kiiratasihely = document.getElementById('container') as HTMLDivElement;
-    let megfeleloE = true;
+    let megfeleloE = true; 
+    let muvekdb = document.getElementById('muvekdb') as HTMLElement;
+    let muvekpriceadat = document.getElementById('muvekprice') as HTMLElement;
+
 
     let Regszobornev = /[a-zA-Z]{1,}/;
     let Regprice = /[1-9]{1,}/
@@ -55,7 +60,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if(megfeleloE){
-            kiiratasihely.textContent="sikeres felvétel!";
+            muvekdarabszama++;
+            muvekprice+=parseInt(price.value);
+            title.value = "";
+            year.value = "";
+            price.value="";
+            height.value="";
+            muvekdb.textContent 
         }
     })
 });

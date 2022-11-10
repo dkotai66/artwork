@@ -10,6 +10,8 @@ class Statute {
         this.height = height;
     }
 }
+let muvekdarabszama = 0;
+let muvekprice = 0;
 document.addEventListener('DOMContentLoaded', () => {
     var _a;
     let title = document.getElementById('title');
@@ -19,6 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let errormessage = document.getElementById('errorMessage');
     let kiiratasihely = document.getElementById('container');
     let megfeleloE = true;
+    let muvekdb = document.getElementById('muvekdb');
+    let muvekpriceadat = document.getElementById('muvekprice');
     let Regszobornev = /[a-zA-Z]{1,}/;
     let Regprice = /[1-9]{1,}/;
     (_a = document.getElementById('send')) === null || _a === void 0 ? void 0 : _a.addEventListener('click', () => {
@@ -39,7 +43,13 @@ document.addEventListener('DOMContentLoaded', () => {
             errormessage.textContent = "Hiba a szobor magasságában!";
         }
         if (megfeleloE) {
-            kiiratasihely.textContent = "sikeres felvétel!";
+            muvekdarabszama++;
+            muvekprice += parseInt(price.value);
+            title.value = "";
+            year.value = "";
+            price.value = "";
+            height.value = "";
+            muvekdb.textContent;
         }
     });
 });
