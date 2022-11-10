@@ -7,17 +7,21 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Szobor adatai: </h1>
-    <label for="title">A szobor címe:</label>
-    <input type="text" id="title">
-    <label for="year">A szobor éve:</label>
-    <input type="number" id="year">
-    <label for="price">A szobor ára:</label>
-    <input type="number" id="price">
-    <label for="height">A szobor ára:</label>
-    <input type="number" id="height">
+    <div id="container">
+        <h1>Szobor adatai: </h1>
+        <label for="title">A szobor címe:</label>
+        <input type="text" id="title">
+        <label for="year">A szobor készítési éve:</label>
+        <input type="number" id="year" max="2022">
+        <label for="price">A szobor ára:</label>
+        <input type="number" id="price" min="1">
+        <label for="height">A szobor ára:</label>
+        <input type="number" id="height" min="20">
+    </div>
+    
     <br>
 
+    <label id="errorMessage"></label>
     <button id="send">Küld</button>
 
     <script src="src/index.js"></script>
