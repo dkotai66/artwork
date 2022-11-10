@@ -60,13 +60,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if(megfeleloE){
-            muvekdarabszama++;
+            muvekdarabszama+=1;
             muvekprice+=parseInt(price.value);
             title.value = "";
             year.value = "";
             price.value="";
             height.value="";
-            muvekdb.textContent 
+            muvekdb.textContent = String(muvekdarabszama);
+            muvekpriceadat.textContent = String(muvekprice);
         }
     })
 });
